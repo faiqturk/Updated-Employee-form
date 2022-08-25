@@ -1,3 +1,12 @@
+<?php
+/**
+ * Table for Display Details of Employees.
+ *
+ * @package Employee-Form.
+ */
+
+?>
+
 <div class="container">
 	<h2>All Employees</h2>
 	<label>Search</label>
@@ -15,7 +24,7 @@
 			<th>Mobile No.</th>
 			<th>Designation</th>
 			<th>Gender</th>
-			<th>Mode</th>
+			<th>Terms</th>
 			<th>skill</th>
 			<th>Actions<th>
 		</tr>

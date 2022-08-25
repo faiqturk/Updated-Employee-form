@@ -38,7 +38,7 @@
         <label for="image">Profile Image</label>
       </div>
       <div class="col-75">
-        <input type="file" id="image" name="image">
+        <input type="file" id="image" name="image" required>
       </div>
     </div>
     <div class="row">
@@ -55,7 +55,7 @@
       </div>
       <div class="col-75">
       <select name="designation" id="designation">
-        <option>-- Select --</option>
+        <option value="—">-- Select --</option>
         <option value="Account Manager">Account Manager</option>
         <option value="Manager">Manager</option>
         <option value="HR">HR</option>
@@ -98,7 +98,7 @@
       <div class="col-25">
       </div>
       <div class="col-75">
-        <input type="checkbox" id="agree" value="agree" name="agree" style="margin:9px;"><b>Agree with Terms and Conditions</b>
+        <input type="checkbox" id="agree" value="agree" name="agree" style="margin:9px;"><b><label for="agree">Agree with Terms and Conditions</label></b>
       </div>
     </div>
     <div class="row">

@@ -1,5 +1,5 @@
 /**
- * Js File for PDF and Update.
+ * Js for PDF and Update.
  *
  * @package Employee-Form.
  */

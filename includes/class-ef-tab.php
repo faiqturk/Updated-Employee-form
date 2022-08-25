@@ -64,11 +64,15 @@ if ( ! class_exists( 'EF_Tab' ) ) {
 				$lastname = $_POST['lastname'];
 				$email    = $_POST['email'];
 				$image    = $_FILES['image'];
-
 				$jdate       = $_POST['jdate'];
 				$mobile      = $_POST['mobile'];
-				$designation = $_POST['designation'];
 				$gender      = $_POST['gender'];
+				if($_POST['designation'] == '—')
+					$designation = '—';
+				else{
+					$designation = $_POST['designation'];
+				}
+				
 				$skill       = implode( ', ', $_POST['skills'] );
 				if ( isset( $_POST['agree'] ) == true ) {
 					$check = $_POST['agree'];
@@ -118,7 +122,7 @@ if ( ! class_exists( 'EF_Tab' ) ) {
 				// For Update.
 				foreach ( $result as $key => $value ) {
 					foreach ( $value as $nested_key => $nested_value ) {
-						if ( $nested_key != 'email' ) {
+						if ( 'email' != $nested_key) {
 							continue;
 						} elseif ( $email == $nested_value ) {
 							$proceed = 'to_update';
@@ -126,7 +130,7 @@ if ( ! class_exists( 'EF_Tab' ) ) {
 						}
 					}
 
-					if ( $proceed == 'to_update' ) {
+					if ( 'to_update'  == $proceed ) {
 						break;
 					}
 				}
